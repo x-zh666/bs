@@ -1,0 +1,4 @@
+txt
+<!-- nasal_secretions_religion/frontend/robots.txt -->
+User-agent: *
+Disallow: /

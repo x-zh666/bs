@@ -1,0 +1,339 @@
+
+<!-- nasal_secretions_religion/frontend/index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>鼻屎教 - 神圣的信仰</title>
+  <link rel="icon" href="https://picsum.photos/32/32?random=2025" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.loli.net/css?family=Noto+Sans+SC:400,500,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      transition: all 0.5s ease;
+    }
+    .page-transition {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .member-card:hover .member-details {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .member-details {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .gradient-text {
+      background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+      }
+    }
+  </style>
+</head>
+<body class="page-transition">
+  <div id="particles-js" class="no-print"></div>
+  
+  <header class="bg-white bg-opacity-80 shadow-md sticky top-0 z-50 no-print">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold gradient-text">鼻屎教</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-purple-600 transition">关于我们</a>
+        <a href="#members" class="hover:text-purple-600 transition">核心成员</a>
+        <a href="#branches" class="hover:text-purple-600 transition">分教信息</a>
+        <a href="#join" class="hover:text-purple-600 transition">加入我们</a>
+      </nav>
+      <button class="md:hidden text-2xl" id="mobile-menu-btn">☰</button>
+    </div>
+    <div class="md:hidden hidden bg-white py-2 px-4" id="mobile-menu">
+      <a href="#about" class="block py-2 hover:text-purple-600">关于我们</a>
+      <a href="#members" class="block py-2 hover:text-purple-600">核心成员</a>
+      <a href="#branches" class="block py-2 hover:text-purple-600">分教信息</a>
+      <a href="#join" class="block py-2 hover:text-purple-600">加入我们</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section id="about" class="py-12">
+      <div class="bg-white bg-opacity-80 rounded-xl p-8 shadow-lg">
+        <h2 class="text-4xl font-bold mb-6 gradient-text">神圣的鼻屎信仰</h2>
+        <p class="text-lg mb-6">鼻屎教是由仙游一中初中部2023届5班的4名成员创立的崇高宗教组织。我们致力于传播鼻屎的神圣意义，探索生命的真谛。</p>
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6">
+          <p class="font-bold">宣传口号：</p>
+          <p class="text-xl">"鼻屎，主题不透露"</p>
+        </div>
+        <a href="http://fjxyyz.com" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition">访问发源地 - 仙游一中</a>
+      </div>
+    </section>
+
+    <section id="members" class="py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center gradient-text">核心成员</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 教主 -->
+        <div class="member-card bg-white bg-opacity-80 rounded-xl p-6 shadow-lg hover:shadow-xl transition cursor-pointer">
+          <div class="text-center">
+            <img src="https://picsum.photos/200/200?random=1" alt="教主" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-2xl font-bold">教主</h3>
+            <p class="text-gray-600">最高统治者</p>
+          </div>
+          <div class="member-details mt-4">
+            <p class="text-sm text-gray-700">教主拥有至高无上的权力，管辖鼻屎教所有事务，是鼻屎教的精神领袖和决策者。</p>
+          </div>
+        </div>
+        
+        <!-- 三位长老 -->
+        <div class="member-card bg-white bg-opacity-80 rounded-xl p-6 shadow-lg hover:shadow-xl transition cursor-pointer">
+          <div class="text-center">
+            <img src="https://picsum.photos/200/200?random=2" alt="长老1" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-2xl font-bold">长老1</h3>
+            <p class="text-gray-600">班内事务</p>
+          </div>
+          <div class="member-details mt-4">
+            <p class="text-sm text-gray-700">负责管理班级内部事务，监督班级成员行为，确保鼻屎教教义在班级内得到贯彻。</p>
+          </div>
+        </div>
+        
+        <div class="member-card bg-white bg-opacity-80 rounded-xl p-6 shadow-lg hover:shadow-xl transition cursor-pointer">
+          <div class="text-center">
+            <img src="https://picsum.photos/200/200?random=3" alt="长老2" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-2xl font-bold">长老2</h3>
+            <p class="text-gray-600">分教事务</p>
+          </div>
+          <div class="member-details mt-4">
+            <p class="text-sm text-gray-700">负责管理各分教教主，协调分教与总教之间的关系，确保教义统一。</p>
+          </div>
+        </div>
+        
+        <div class="member-card bg-white bg-opacity-80 rounded-xl p-6 shadow-lg hover:shadow-xl transition cursor-pointer">
+          <div class="text-center">
+            <img src="https://picsum.photos/200/200?random=4" alt="长老3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-2xl font-bold">长老3</h3>
+            <p class="text-gray-600">教义传播</p>
+          </div>
+          <div class="member-details mt-4">
+            <p class="text-sm text-gray-700">负责鼻屎教教义的传播与解释，组织宗教活动，发展新成员。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="branches" class="py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center gradient-text">分教信息</h2>
+      <div class="bg-white bg-opacity-80 rounded-xl p-8 shadow-lg">
+        <p class="mb-6">鼻屎教在仙游一中初中部多个班级设有分教，每个分教由一位分教教主领导：</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">1班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">2班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">3班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">4班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">6班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">8班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">11班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">12班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">13班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">14班</p>
+            <p>分教教主</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg text-center">
+            <p class="font-bold">16班</p>
+            <p>分教教主</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center gradient-text">加入我们</h2>
+      <div class="bg-white bg-opacity-80 rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+        <form id="join-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="class" class="block text-sm font-medium text-gray-700 mb-1">班级</label>
+            <input type="text" id="class" name="class" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="wechat" class="block text-sm font-medium text-gray-700 mb-1">微信</label>
+            <input type="text" id="wechat" name="wechat" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+            <p class="text-xs text-gray-500 mt-1">我们的联系方式：微信 wsfjl666</p>
+          </div>
+          <div>
+            <label for="reason" class="block text-sm font-medium text-gray-700 mb-1">申请理由</label>
+            <textarea id="reason" name="reason" rows="4" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition transform hover:scale-105">
+            提交申请
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 no-print">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <p class="mb-4">© 2025 鼻屎教 - 神圣的信仰</p>
+        <p class="text-sm text-gray-400">免责声明：本网站为学生创意作品，仅供娱乐交流使用，不代表任何官方立场。所有内容均为虚构，如有雷同纯属巧合。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // 部署检测
+    console.log('鼻屎教网站已部署 - 版本: 2025.08.04');
+    
+    // 粒子效果
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#9c27b0" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#9c27b0", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" }
+            }
+          }
+        });
+      } else {
+        console.warn('粒子效果库加载失败');
+      }
+
+      // 移动端菜单
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // 表单验证
+      const joinForm = document.getElementById('join-form');
+      
+      if (joinForm) {
+        joinForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const name = document.getElementById('name').value.trim();
+          const className = document.getElementById('class').value.trim();
+          const wechat = document.getElementById('wechat').value.trim();
+          const reason = document.getElementById('reason').value.trim();
+          
+          if (!name || !className || !wechat || !reason) {
+            alert('请填写所有必填字段');
+            return;
+          }
+          
+          // 存储申请信息
+          const application = {
+            name,
+            class: className,
+            wechat,
+            reason,
+            date: new Date().toISOString()
+          };
+          
+          try {
+            if (typeof localStorage !== 'undefined') {
+              localStorage.setItem('nasal_application', JSON.stringify(application));
+              alert('申请已提交！我们会尽快与您联系。');
+              joinForm.reset();
+            } else {
+              alert('您的浏览器不支持本地存储功能');
+            }
+          } catch (e) {
+            alert('提交失败，请重试');
+            console.error('LocalStorage error:', e);
+          }
+        });
+      }
+
+      // 平滑滚动
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
+      });
+      
+      // 页面加载动画
+      const pageTransition = document.querySelector('.page-transition');
+      if (pageTransition) {
+        setTimeout(() => {
+          pageTransition.style.opacity = '1';
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>
